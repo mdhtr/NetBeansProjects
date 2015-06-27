@@ -16,7 +16,7 @@ class Evaluator {
         this.operator = operator;
     }
 
-    int evaluate(Operands o) {
+    double evaluate(Operands o) {
         if (operator.equals("+")){
             return o.getFirstOp() + o.getSecondOp();
         }

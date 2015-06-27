@@ -11,25 +11,25 @@ package javahw_02;
  */
 class Operands {
 
-    private final int firstOp;
-    private final int secondOp;
+    private final double firstOp;
+    private final double secondOp;
 
     public Operands(String firstOp, String secondOp) {
-        this.firstOp = Integer.parseInt(firstOp);
-        this.secondOp = Integer.parseInt(secondOp);
+        this.firstOp = Double.parseDouble(firstOp);
+        this.secondOp = Double.parseDouble(secondOp);
     }
 
     /**
      * @return the firstOp
      */
-    public int getFirstOp() {
+    public double getFirstOp() {
         return firstOp;
     }
 
     /**
      * @return the secondOp
      */
-    public int getSecondOp() {
+    public double getSecondOp() {
         return secondOp;
     }
 

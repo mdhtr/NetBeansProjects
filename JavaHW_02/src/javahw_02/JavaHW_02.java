@@ -19,7 +19,7 @@ public class JavaHW_02 {
         Operands o = new Operands(args[0], args[2]);
         Evaluator e = new Evaluator(args[1]);
         
-        int result = e.evaluate(o);
+        double result = e.evaluate(o);
         System.out.println("Result: " + result);
     }
     
