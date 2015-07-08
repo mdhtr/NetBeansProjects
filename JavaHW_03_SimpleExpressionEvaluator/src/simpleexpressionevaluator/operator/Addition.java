@@ -3,17 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package simpleexpressionevaluator;
+package simpleexpressionevaluator.operator;
+
+import simpleexpressionevaluator.Operands;
 
 /**
  *
  * @author agi
  */
-public class Multiplication implements Operator {
+public class Addition implements Operator {
 
     @Override
     public Double opearte(Operands o) {
-        return o.getFirstOperand() * o.getSecondOperand();
+        return o.getFirstOperand() + o.getSecondOperand();
     }
     
 }

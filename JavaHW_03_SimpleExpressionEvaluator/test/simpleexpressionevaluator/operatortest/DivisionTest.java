@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package simpleexpressionevaluator;
+package simpleexpressionevaluator.operatortest;
 
-import simpleexpressionevaluator.Division;
+import simpleexpressionevaluator.operator.Division;
 import simpleexpressionevaluator.Operands;
 import org.junit.Assert;
 import org.junit.Test;
+import simpleexpressionevaluator.Operands;
 import static org.junit.Assert.*;
 
 /**

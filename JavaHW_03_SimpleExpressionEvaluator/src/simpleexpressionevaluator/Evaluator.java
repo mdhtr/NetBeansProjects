@@ -5,6 +5,11 @@
  */
 package simpleexpressionevaluator;
 
+import simpleexpressionevaluator.expression.ExpressionBuilder;
+import simpleexpressionevaluator.expression.Expression;
+import simpleexpressionevaluator.operator.Operator;
+import simpleexpressionevaluator.outputwriter.OutputWriter;
+
 /**
  *
  * @author agi

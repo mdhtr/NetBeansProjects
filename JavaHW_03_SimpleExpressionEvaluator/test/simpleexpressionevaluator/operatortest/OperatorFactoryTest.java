@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package simpleexpressionevaluator;
+package simpleexpressionevaluator.operatortest;
 
+import simpleexpressionevaluator.operator.NoSuchOperatorException;
+import simpleexpressionevaluator.operator.Operator;
+import simpleexpressionevaluator.operator.OperatorFactory;
 import static org.hamcrest.CoreMatchers.is;
 //import static org.hamcrest.CoreMatchers.nullValue; //for nullValue testing (deprecated)
 import org.junit.Test;
@@ -28,28 +31,28 @@ public class OperatorFactoryTest {
     public void shouldCreateAddition() throws NoSuchOperatorException {
         //OperatorFactory factory = new OperatorFactory(); // before test refactoring
         Operator op = factory.createOperator("+");
-        assertThat(op.getClass().getCanonicalName(), is("simpleexpressionevaluator.Addition"));
+        assertThat(op.getClass().getCanonicalName(), is("simpleexpressionevaluator.operator.Addition"));
     }
 
     @Test
     public void shouldCreateSubstraction() throws NoSuchOperatorException {
         //OperatorFactory factory = new OperatorFactory(); // before test refactoring
         Operator op = factory.createOperator("-");
-        assertThat(op.getClass().getCanonicalName(), is("simpleexpressionevaluator.Subtraction"));
+        assertThat(op.getClass().getCanonicalName(), is("simpleexpressionevaluator.operator.Subtraction"));
     }
 
     @Test
     public void shouldCreateMultiplication() throws NoSuchOperatorException {
         //OperatorFactory factory = new OperatorFactory(); // before test refactoring
         Operator op = factory.createOperator("*");
-        assertThat(op.getClass().getCanonicalName(), is("simpleexpressionevaluator.Multiplication"));
+        assertThat(op.getClass().getCanonicalName(), is("simpleexpressionevaluator.operator.Multiplication"));
     }
 
     @Test
     public void shouldCreateDivision() throws NoSuchOperatorException {
         //OperatorFactory factory = new OperatorFactory(); // before test refactoring
         Operator op = factory.createOperator("/");
-        assertThat(op.getClass().getCanonicalName(), is("simpleexpressionevaluator.Division"));
+        assertThat(op.getClass().getCanonicalName(), is("simpleexpressionevaluator.operator.Division"));
     }
     
     /* @Deprecated

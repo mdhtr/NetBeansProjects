@@ -5,6 +5,10 @@
  */
 package simpleexpressionevaluator;
 
+import simpleexpressionevaluator.testhelpers.MockWriter;
+import simpleexpressionevaluator.expression.ExpressionBuilder;
+import simpleexpressionevaluator.expression.Expression;
+import simpleexpressionevaluator.operator.Addition;
 import static org.hamcrest.CoreMatchers.is;
 import org.junit.Test;
 import static org.junit.Assert.*;

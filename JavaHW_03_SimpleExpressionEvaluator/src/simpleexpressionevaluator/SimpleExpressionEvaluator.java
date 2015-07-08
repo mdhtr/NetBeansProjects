@@ -5,6 +5,9 @@
  */
 package simpleexpressionevaluator;
 
+import simpleexpressionevaluator.expression.CommandLineExpressionBuilder;
+import simpleexpressionevaluator.outputwriter.ConsoleOutputWriter;
+
 /** Acceptance Specification
  * This program should 
  * Given a simple mathematical expression from the command line

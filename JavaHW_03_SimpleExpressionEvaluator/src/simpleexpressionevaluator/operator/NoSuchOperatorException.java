@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package simpleexpressionevaluator;
+package simpleexpressionevaluator.operator;
 
 /**
  *
  * @author agi
  */
-public interface Operator {
-    public Double opearte(Operands o);
+public class NoSuchOperatorException extends Exception {
+    public NoSuchOperatorException(final String msg) {
+        super(msg);
+    }
+    
 }

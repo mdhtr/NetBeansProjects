@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package simpleexpressionevaluator;
+package simpleexpressionevaluator.operatortest;
 
 import simpleexpressionevaluator.Operands;
-import simpleexpressionevaluator.Multiplication;
+import simpleexpressionevaluator.operator.Multiplication;
 import static org.hamcrest.CoreMatchers.is;
 import org.junit.Test;
+import simpleexpressionevaluator.Operands;
 import static org.junit.Assert.*;
 
 /**

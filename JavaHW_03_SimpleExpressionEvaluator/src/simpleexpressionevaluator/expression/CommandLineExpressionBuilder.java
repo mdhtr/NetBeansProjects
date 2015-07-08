@@ -3,7 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package simpleexpressionevaluator;
+package simpleexpressionevaluator.expression;
+
+import simpleexpressionevaluator.Operands;
+import simpleexpressionevaluator.operator.NoSuchOperatorException;
+import simpleexpressionevaluator.operator.OperatorFactory;
+import simpleexpressionevaluator.operator.Operator;
 
 /**
  *
@@ -14,7 +19,7 @@ public class CommandLineExpressionBuilder implements ExpressionBuilder {
     private Expression expression;
     private boolean hasNext;
 
-    CommandLineExpressionBuilder(String[] args) {
+    public CommandLineExpressionBuilder(String[] args) {
         try { // construction logic from main class of previous version moved here
             Double o1 = Double.parseDouble(args[0]);
             Double o2 = Double.parseDouble(args[2]);

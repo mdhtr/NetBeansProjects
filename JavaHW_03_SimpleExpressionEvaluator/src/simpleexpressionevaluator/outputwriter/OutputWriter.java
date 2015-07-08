@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package simpleexpressionevaluator;
+package simpleexpressionevaluator.outputwriter;
 
 /**
  *
  * @author agi
  */
-public class ConsoleOutputWriter implements OutputWriter{
-
-    @Override
-    public void write(Double result) {
-        System.out.println("Result: " + result);
-    }
-    
+public interface OutputWriter {
+    public void write(final Double result);    
 }

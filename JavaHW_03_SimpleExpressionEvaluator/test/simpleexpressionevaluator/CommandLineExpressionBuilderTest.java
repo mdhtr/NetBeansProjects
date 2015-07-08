@@ -5,6 +5,7 @@
  */
 package simpleexpressionevaluator;
 
+import simpleexpressionevaluator.expression.CommandLineExpressionBuilder;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.nullValue;
