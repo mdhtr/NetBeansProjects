@@ -10,7 +10,7 @@ package simpleexpressionevaluator;
  * @author agi
  */
 
-/* Factory Method / Virtual Constructor: 
+/* Design Pattern: Factory Method / Virtual Constructor: 
  Define an interface for creating an object, 
  but let subclasses decide which class to instantiate.
  */
