@@ -6,9 +6,7 @@
 package simpleexpressionevaluator.expression;
 
 import simpleexpressionevaluator.Operands;
-import simpleexpressionevaluator.operator.NoSuchOperatorException;
-import simpleexpressionevaluator.operator.OperatorFactory;
-import simpleexpressionevaluator.operator.Operator;
+import simpleexpressionevaluator.operator.*;
 
 /**
  *
@@ -28,6 +26,7 @@ public class CommandLineExpressionBuilder implements ExpressionBuilder {
             OperatorFactory factory = new OperatorFactory();
             Operator operator
                     = factory.createOperator(args[1]);
+            
             expression = new Expression(operator, operands);
             hasNext = true;
 
@@ -51,7 +50,5 @@ public class CommandLineExpressionBuilder implements ExpressionBuilder {
     	}
     	hasNext = false;
     	return expression;
-
-
     }
 }

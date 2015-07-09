@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package simpleexpressionevaluator.operatortest;
+package simpleexpressionevaluator.operator;
 
 import simpleexpressionevaluator.Operands;
-import simpleexpressionevaluator.operator.Addition;
+import simpleexpressionevaluator.operator.Multiplication;
 import static org.hamcrest.CoreMatchers.is;
 import org.junit.Test;
 import simpleexpressionevaluator.Operands;
@@ -16,15 +16,17 @@ import static org.junit.Assert.*;
  *
  * @author agi
  */
-public class AdditionTest {
-    
+public class MultiplicationTest {
+
+    /**
+     * Test of opearte method, of class Multiplication.
+     */
     @Test
-    public void shouldAdd() {
-        
-        Addition a = new Addition();
-    	Operands o = new Operands(23.0, 9.0);
-    	assertThat(a.opearte(o), is(32.0));
+    public void shouldMultiplacate() {
+        Multiplication m = new Multiplication();
+        Operands o = new Operands(16.0, 2.0);
+        assertThat(m.opearte(o), is(32.0));
 
     }
-    
+
 }

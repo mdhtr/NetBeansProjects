@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package simpleexpressionevaluator.operatortest;
+package simpleexpressionevaluator.operator;
 
 import simpleexpressionevaluator.operator.NoSuchOperatorException;
 import simpleexpressionevaluator.operator.Operator;

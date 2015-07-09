@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package simpleexpressionevaluator;
+package simpleexpressionevaluator.expression;
 
 import simpleexpressionevaluator.expression.CommandLineExpressionBuilder;
 import static org.hamcrest.CoreMatchers.is;

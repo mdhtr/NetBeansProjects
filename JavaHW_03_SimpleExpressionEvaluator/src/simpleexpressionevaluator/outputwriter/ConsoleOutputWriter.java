@@ -5,8 +5,6 @@
  */
 package simpleexpressionevaluator.outputwriter;
 
-import simpleexpressionevaluator.outputwriter.OutputWriter;
-
 /**
  *
  * @author agi
