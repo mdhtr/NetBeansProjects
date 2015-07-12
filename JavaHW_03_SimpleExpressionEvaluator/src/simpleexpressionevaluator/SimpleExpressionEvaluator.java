@@ -28,36 +28,21 @@ public class SimpleExpressionEvaluator {
     /**
      * @param args the command line arguments
      * @throws java.io.FileNotFoundException
-     * @throws simpleexpressionevaluator.operator.NoSuchOperatorException
      */
-    public static void main(String[] args) throws FileNotFoundException, IOException, NoSuchOperatorException {
+    public static void main(String[] args) throws FileNotFoundException, IOException {
         //CommandLineExpressionBuilder builder = new CommandLineExpressionBuilder(args);
         //ConsoleOutputWriter writer = new ConsoleOutputWriter();
-        //Evaluator evaluator = new Evaluator(builder, writer);
-        //evaluator.evaluate();
-        
-        String line;
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(args[0]));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("results.txt"));
-                    
-        while ((line = bufferedReader.readLine()) != null) {
-            String[] arguments = line.split("\\ ");
 
-            Double o1 = Double.parseDouble(arguments[0]);
-            Double o2 = Double.parseDouble(arguments[2]);
-            Operands operands = new Operands(o1, o2);
+        final FileInputStream fileInputStream = new FileInputStream(new File(args[0]));
+        final FileOutputStream fileOutputStream = new FileOutputStream("results.txt");
 
-            OperatorFactory factory = new OperatorFactory();
-            Operator operator = factory.createOperator(arguments[1]);
-            Expression expression = new Expression(operator, operands);
-            
-            Operator getoperator = expression.getOperator();
-            Double result = getoperator.opearte(expression.getOperands());
-            
-            bufferedWriter.write("Result: " + result);
-            bufferedWriter.newLine();
-        }
-       bufferedReader.close(); 
-       bufferedWriter.close();
+        TextFileExpressionBuilder builder = new TextFileExpressionBuilder(fileInputStream);
+        TextFileOutputWriter writer = new TextFileOutputWriter(fileOutputStream);
+
+        Evaluator evaluator = new Evaluator(builder, writer);
+        evaluator.evaluate();
+
+        fileInputStream.close();
+        fileOutputStream.close();
     }
 }
