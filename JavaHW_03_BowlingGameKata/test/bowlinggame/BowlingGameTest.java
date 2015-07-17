@@ -11,7 +11,7 @@ public class BowlingGameTest extends TestCase {
         g = new Game();
     }
 
-    private void rollMany(int n, int pins) { // roll loop is not duplicated anymore.
+    private void rollMany(int n, int pins) {
         for (int i = 0; i < n; i++) {
             g.roll(pins);
         }
@@ -27,5 +27,11 @@ public class BowlingGameTest extends TestCase {
         assertEquals(20, g.score());
     }
 
-    // Both tests passed.
+    public void testOneSpare() throws Exception {
+        g.roll(5);
+        g.roll(5); // spare // ugly comment in test
+        g.roll(3);
+        rollMany(17, 0);
+        assertEquals(16, g.score());
+    }
 }
