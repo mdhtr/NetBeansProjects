@@ -39,11 +39,13 @@ public class BowlingGameTest extends TestCase {
         g.roll(3);
         g.roll(4);
         rollMany(16, 0);
-        assertEquals(24, g.score()); // Failed: expected:<24> but was:<17>
+        assertEquals(24, g.score()); 
     }
 
     private void rollSpare() {
         g.roll(5);
         g.roll(5);
     }
+    
+    // All 4 tests passed.
 }
