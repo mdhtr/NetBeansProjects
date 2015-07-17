@@ -8,13 +8,16 @@ public class BowlingGameTest extends TestCase {
 
     @Override
     protected void setUp() throws Exception {
-        g = new Game(); // game creation is not duplicated anymore.
+        g = new Game(); 
     }
 
     public void testGutterGame() throws Exception {
 
-        for (int i = 0; i < 20; i++) {
-            g.roll(0);
+        int n = 20;
+        int pins = 0;
+
+        for (int i = 0; i < n; i++) {
+            g.roll(pins);
         }
         assertEquals(0, g.score());
     }
@@ -26,6 +29,6 @@ public class BowlingGameTest extends TestCase {
         }
         assertEquals(20, g.score());
     }
-    
+
     // Both tests passed.
 }
