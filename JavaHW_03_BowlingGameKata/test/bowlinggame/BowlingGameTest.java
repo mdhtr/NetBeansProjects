@@ -27,14 +27,12 @@ public class BowlingGameTest extends TestCase {
         assertEquals(20, g.score());
     }
     
-    // Both tests passed.
-
-//    public void testOneSpare() throws Exception {
-//        g.roll(5);
-//        g.roll(5); // spare // ugly comment in test
-//        g.roll(3);
-//        rollMany(17, 0);
-//        assertEquals(16, g.score()); // Failed: expected:<16> but was:<13>
-//    }
+    public void testOneSpare() throws Exception {
+        g.roll(5);
+        g.roll(5); // spare // ugly comment in test
+        g.roll(3);
+        rollMany(17, 0);
+        assertEquals(16, g.score()); // Failed: expected:<16> but was:<13>
+    }
     
 }
