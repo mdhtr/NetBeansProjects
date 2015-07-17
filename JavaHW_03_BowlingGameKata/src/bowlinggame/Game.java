@@ -3,13 +3,15 @@ package bowlinggame;
 public class Game {
 
     private int score = 0;
+    private int rolls[] = new int[21];
+    private int currentRoll = 0;
 
-    public void roll(int pins) { // roll() calculates score, but name does not imply that.
-        score += pins; 
+    public void roll(int pins) {
+        score += pins;
+        rolls[currentRoll++] = pins;
     }
 
-    public int score() { // score() does not calculate score, but name implies that it does.
+    public int score() {
         return score;
     }
-    // Design is wrong.  Responsibilities are misplaced.
 }
