@@ -4,13 +4,12 @@ public class Game {
 
     private int score = 0;
 
-    public void roll(int pins) {
-        score += pins; /* tempted to use flag to 
-                          remember previous roll.  
-                          So design must be wrong.*/
+    public void roll(int pins) { // roll() calculates score, but name does not imply that.
+        score += pins; 
     }
 
-    public int score() {
+    public int score() { // score() does not calculate score, but name implies that it does.
         return score;
     }
+    // Design is wrong.  Responsibilities are misplaced.
 }
