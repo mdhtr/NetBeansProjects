@@ -17,6 +17,6 @@ public class BowlingGameTest extends TestCase {
         for (int i = 0; i < 20; i++) { // roll loop is duplicated
             g.roll(1); 
         }
-        assertEquals(20, g.score());
+        assertEquals(20, g.score()); // Failed: expected:<20> but was:<0>
     }
 }
