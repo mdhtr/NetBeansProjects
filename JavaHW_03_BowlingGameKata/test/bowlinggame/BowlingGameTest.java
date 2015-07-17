@@ -33,7 +33,14 @@ public class BowlingGameTest extends TestCase {
         rollMany(17, 0);
         assertEquals(16, g.score());
     }
-    // All 3 tests passed.
+
+    public void testOneStrike() throws Exception {
+        g.roll(10); // strike // ugly comment in testOneStrike()
+        g.roll(3);
+        g.roll(4);
+        rollMany(16, 0);
+        assertEquals(24, g.score()); // Failed: expected:<24> but was:<17>
+    }
 
     private void rollSpare() {
         g.roll(5);
