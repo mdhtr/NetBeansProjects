@@ -27,6 +27,8 @@ public class BowlingGameTest extends TestCase {
         assertEquals(20, g.score());
     }
     
+    // Both tests passed.
+    
 //    public void testOneSpare() throws Exception {
 //        g.roll(5);
 //        g.roll(5); // spare // ugly comment in test
