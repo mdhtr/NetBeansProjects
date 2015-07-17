@@ -28,11 +28,15 @@ public class BowlingGameTest extends TestCase {
     }
 
     public void testOneSpare() throws Exception {
-        g.roll(5);
-        g.roll(5); // spare // ugly comment in test
+        rollSpare();
         g.roll(3);
         rollMany(17, 0);
         assertEquals(16, g.score());
     }
     // All 3 tests passed.
+
+    private void rollSpare() {
+        g.roll(5);
+        g.roll(5);
+    }
 }
