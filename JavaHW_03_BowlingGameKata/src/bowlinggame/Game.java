@@ -14,7 +14,7 @@ public class Game {
         int frameIndex = 0;
 
         for (int frame = 0; frame < 10; frame++) {
-            if (rolls[frameIndex] == 10) { // strike // ugly comment in conditional.
+            if (isStrike(frameIndex)) { 
                 score += 10 + strikeBonus(frameIndex);
                 frameIndex++;
             } else if (isSpare(frameIndex)) {
@@ -26,6 +26,10 @@ public class Game {
             } 
         }
         return score;
+    }
+
+    private boolean isStrike(int frameIndex) {
+        return rolls[frameIndex] == 10;
     }
 
     private int sumOfBallsInFrame(int frameIndex) {
