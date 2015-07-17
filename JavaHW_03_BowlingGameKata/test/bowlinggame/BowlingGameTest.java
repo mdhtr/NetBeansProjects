@@ -35,13 +35,20 @@ public class BowlingGameTest extends TestCase {
     }
 
     public void testOneStrike() throws Exception {
-        rollStrike(); 
+        rollStrike();
         g.roll(3);
         g.roll(4);
         rollMany(16, 0);
-        assertEquals(24, g.score()); 
+        assertEquals(24, g.score());
     }
 
+    public void testPerfectGame() throws Exception {
+        rollMany(12, 10);
+        assertEquals(300, g.score());
+    }
+
+    // All 5 tests passed
+    
     private void rollStrike() {
         g.roll(10);
     }
@@ -50,6 +57,6 @@ public class BowlingGameTest extends TestCase {
         g.roll(5);
         g.roll(5);
     }
-    
+
     // All 4 tests passed.
 }
